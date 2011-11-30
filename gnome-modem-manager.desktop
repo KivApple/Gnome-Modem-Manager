@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Encoding=UTF-8
+Version=1.0
+Type=Application
+Terminal=false
+Exec=gnome-modem-manager
+Name=Gnome Modem Manager
+Icon=modem
+Category=Internet
