@@ -156,7 +156,11 @@ class GnomeModemManager : GLib.Object {
 	private void load_ui() {
 		try {
 			this.builder = new Builder();
-			this.builder.add_from_file("gnome-modem-manager.ui");
+			try {
+				this.builder.add_from_file("gnome-modem-manager.ui");
+			} catch (Error e) {
+				this.builder.add_from_file("/usr/share/gnome-modem-manager/gnome-modem-manager.ui");
+			}
 			this.builder.connect_signals(this);
 			this.main_window = this.builder.get_object("main-window") as Window;
 			this.modem_liststore = this.builder.get_object("modem-liststore") as ListStore;
