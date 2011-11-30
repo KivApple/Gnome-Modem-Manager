@@ -1,0 +1,13 @@
+GNOME Modem Manager
+~~~~~~~~~~~~~~~~~~~
+
+GNOME Modem Manager is small utility to control 3G modems via
+ModemManager (a part of NetworkManager) D-Bus interface.
+
+This program distributed under terms of GPLv2 or higher.
+
+The official webpage of this application is
+http://cpu-fun.ru/projects/4-gnome-modem-manager
+
+~~~~~~~~~~~~~~~~~~
+Copyright (c) kiv.apple@gmail.com
