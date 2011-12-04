@@ -1,0 +1,5 @@
+*.mo
+*.o
+*.tmp
+*.bak
+gnome-modem-manager
