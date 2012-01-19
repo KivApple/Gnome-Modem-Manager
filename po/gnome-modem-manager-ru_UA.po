@@ -1,0 +1,138 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2012
+# This file is distributed under the same license as the PACKAGE package.
+# Dmitriy Kuleshov <Pakirava.Datsuma@gmail.com>, 2012.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Gnome Modem Manager\n"
+"Report-Msgid-Bugs-To: kiv.apple@gmail.com\n"
+"POT-Creation-Date: 2012-01-09 12:39+0200\n"
+"PO-Revision-Date: 2012-01-09 12:39+0200\n"
+"Last-Translator: Dmitriy Kuleshov <Pakirava.Datsuma@gmail.com>\n"
+"Language-Team: gnome-modem-manager\n"
+"Language: ukrainian (украинский)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: gnome-modem-manager.ui:10
+msgid "Copyright (C) 2011 KIV"
+msgstr "Copyright (c) 2011 KIV"
+
+#: gnome-modem-manager.ui:11
+msgid "Modem manager for Gnome"
+msgstr "Менеджер модемів для Gnome"
+
+#: gnome-modem-manager.ui:75
+msgid "Gnome Modem Manager"
+msgstr "Gnome Modem Manager"
+
+#: gnome-modem-manager.ui:96
+#: gnome-modem-manager.ui:247
+msgid "Modem:"
+msgstr "Модем:"
+
+#: gnome-modem-manager.ui:151
+msgid "Device:"
+msgstr "Пристрій:"
+
+#: gnome-modem-manager.ui:179
+msgid "Master device:"
+msgstr "Головний пристрій:"
+
+#: gnome-modem-manager.ui:231
+msgid "Manufacturer:"
+msgstr "Виробник:"
+
+#: gnome-modem-manager.ui:275
+msgid "Version:"
+msgstr "Версія:"
+
+#: gnome-modem-manager.ui:303
+msgid "Driver:"
+msgstr "Драйвер:"
+
+#: gnome-modem-manager.ui:319
+msgid "IMEI:"
+msgstr "IMEI:"
+
+#: gnome-modem-manager.ui:335
+msgid "IMSI:"
+msgstr "IMSI:"
+
+#: gnome-modem-manager.ui:375
+msgid "Service provider:"
+msgstr "Постачальник послуг:"
+
+#: gnome-modem-manager.ui:403
+msgid "Signal qualitiy:"
+msgstr "Рівень сигнала:"
+
+#: gnome-modem-manager.ui:431
+msgid "Operator name:"
+msgstr "Им'я оператора:"
+
+#: gnome-modem-manager.ui:459
+msgid "Object path:"
+msgstr "Адреса об'єкта:"
+
+#: gnome-modem-manager.ui:505
+msgid "Info"
+msgstr "Информація"
+
+#: gnome-modem-manager.ui:519
+msgid "This modem does not support contacts"
+msgstr "Цей модем не підтримує контакти"
+
+#: gnome-modem-manager.ui:550
+#: gnome-modem-manager.ui:645
+msgid "#"
+msgstr "№"
+
+#: gnome-modem-manager.ui:561
+msgid "Name"
+msgstr "Им'я"
+
+#: gnome-modem-manager.ui:572
+msgid "Number"
+msgstr "Номер"
+
+#: gnome-modem-manager.ui:606
+msgid "Contacts"
+msgstr "Контакти"
+
+#: gnome-modem-manager.ui:656
+msgid "Phone number"
+msgstr "Номер телефона"
+
+#: gnome-modem-manager.ui:670
+msgid "Text"
+msgstr "Текст"
+
+#: gnome-modem-manager.ui:681
+msgid "Completed"
+msgstr "Завершено"
+
+#: gnome-modem-manager.ui:792
+#: gnome-modem-manager.ui:942
+msgid "SMS"
+msgstr "СМС"
+
+#: gnome-modem-manager.ui:835
+msgid "*100#"
+msgstr "*100#"
+
+#: gnome-modem-manager.ui:845
+#: gnome-modem-manager.ui:989
+msgid "Send"
+msgstr "Надіслати"
+
+#: gnome-modem-manager.ui:875
+msgid "USSD"
+msgstr "USSD"
+
+#: gnome-modem-manager.ui:1026
+msgid "Phone:"
+msgstr "Телефон:"
+
