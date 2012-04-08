@@ -141,7 +141,7 @@ class GnomeModemManager : GLib.Object {
 		GLib.Intl.textdomain("gnome-modem-manager");
 		this.load_ui();
 		this.load_config();
-		this.load_devices_list();
+		this.load_device_list();
 		this.main_window.visible = true;
 	}
 	
