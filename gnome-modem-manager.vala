@@ -140,19 +140,8 @@ class GnomeModemManager : GLib.Object {
 		GLib.Intl.bind_textdomain_codeset("gnome-modem-manager", "UTF-8");
 		GLib.Intl.textdomain("gnome-modem-manager");
 		this.load_ui();
-		try {
-			this.modem = null;
-			this.modem_manager = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.ModemManager", "/org/freedesktop/ModemManager");
-			ObjectPath[] modem_paths = this.modem_manager.EnumerateDevices();
-			foreach (ObjectPath modem_path in modem_paths) {
-				this.device_added(modem_path);
-			}
-			this.modem_manager.DeviceAdded.connect(this.device_added);
-			this.modem_manager.DeviceRemoved.connect(this.device_removed);
-		} catch (Error e) {
-			stderr.printf("Failed to connect to modem-manager: %s\n", e.message);
-		}
-		this.modem_changed(this.modem_combobox);
+		this.load_config();
+		this.load_devices_list();
 		this.main_window.visible = true;
 	}
 	
@@ -160,7 +149,7 @@ class GnomeModemManager : GLib.Object {
 		try {
 			this.builder = new Builder();
 			try {
-				this.builder.add_from_file("gnome-modem-manager.ui");
+				this.builder.add_from_file("./gnome-modem-manager.ui");
 			} catch (Error e) {
 				this.builder.add_from_file("/usr/share/gnome-modem-manager/gnome-modem-manager.ui");
 			}
@@ -198,6 +187,30 @@ class GnomeModemManager : GLib.Object {
 		} catch (Error e) {
 			stderr.printf("Failed to load ui: %s\n", e.message);
 		}
+	}
+	
+	private void load_config() {
+		
+	}
+	
+	private void store_config() {
+		
+	}
+	
+	private void load_device_list() {
+		try {
+			this.modem = null;
+			this.modem_manager = Bus.get_proxy_sync(BusType.SYSTEM, "org.freedesktop.ModemManager", "/org/freedesktop/ModemManager");
+			ObjectPath[] modem_paths = this.modem_manager.EnumerateDevices();
+			foreach (ObjectPath modem_path in modem_paths) {
+				this.device_added(modem_path);
+			}
+			this.modem_manager.DeviceAdded.connect(this.device_added);
+			this.modem_manager.DeviceRemoved.connect(this.device_removed);
+		} catch (Error e) {
+			stderr.printf("Failed to connect to modem-manager: %s\n", e.message);
+		}
+		this.modem_changed(this.modem_combobox);
 	}
 	
 	[CCode (instance_pos = -1)]
@@ -447,6 +460,7 @@ class GnomeModemManager : GLib.Object {
 	
 	public void run() {
 		Gtk.main();
+		this.store_config();
 	}
 	
 	static int main(string[] args) {
