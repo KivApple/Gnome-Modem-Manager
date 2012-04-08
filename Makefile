@@ -1,6 +1,6 @@
 all: compile locale
 compile: gnome-modem-manager.vala
-	valac -X -DGETTEXT_PACKAGE="gnome-modem-manager" --disable-warnings --pkg gmodule-2.0 --pkg gio-2.0 --pkg gtk+-3.0 gnome-modem-manager.vala
+	valac -X -DGETTEXT_PACKAGE="gnome-modem-manager" --disable-warnings --pkg gmodule-2.0 --pkg gio-2.0 --pkg gtk+-2.0 gnome-modem-manager.vala
 locale: po/gnome-modem-manager-ru_RU.po
 	msgfmt --output-file=po/gnome-modem-manager-ru_RU.mo po/gnome-modem-manager-ru_RU.po
 clean:

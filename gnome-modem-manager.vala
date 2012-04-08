@@ -456,6 +456,7 @@ class GnomeModemManager : GLib.Object {
 		} catch (Error e) {
 			warning("Failed to fetch SMS list: %s", e.message);
 		}
+		this.current_sms_changed(this.sms_treeview);
 	}
 	
 	public void run() {
