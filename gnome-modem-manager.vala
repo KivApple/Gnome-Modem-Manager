@@ -103,6 +103,7 @@ class GnomeModemManager : GLib.Object {
 	GsmModemSms gsm_modem_sms;
 	GsmModemContacts gsm_modem_contacts;
 	
+	KeyFile config;
 	Builder builder;
 	Window main_window;
 	ListStore modem_liststore;
@@ -190,11 +191,18 @@ class GnomeModemManager : GLib.Object {
 	}
 	
 	private void load_config() {
-		
+		this.config = new KeyFile();
+		try {
+			this.config.load_from_file(Environment.get_variable("HOME") + "/.config/gnome-modem-manager.ini", KeyFileFlags.KEEP_COMMENTS);
+			this.ussd_entry.set_text(this.config.get_string("Ussd", "Number"));
+		} catch (Error e) {
+			stdout.printf("Configuration file not found - first run.\n");
+		}
 	}
 	
 	private void store_config() {
-		
+		this.config.set_string("Ussd", "Number", this.ussd_entry.get_text());
+		FileUtils.set_contents(Environment.get_variable("HOME") + "/.config/gnome-modem-manager.ini", this.config.to_data());
 	}
 	
 	private void load_device_list() {
