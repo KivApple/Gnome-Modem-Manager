@@ -121,19 +121,19 @@ class GnomeModemManager : GLib.Object {
 	Label modem_operator_name_label;
 	Label modem_signal_quality_label;
 	Label modem_path_label;
-	Widget contacts_tab;
+	/* Widget contacts_tab;
 	Label no_contacts_label;
 	ListStore contact_liststore;
-	TreeView contact_treeview;
+	TreeView contact_treeview; */
 	ListStore sms_liststore;
 	TreeView sms_treeview;
 	TextView sms_textview;
 	Button remove_sms_button;
 	TextView ussd_textview;
 	Entry ussd_entry;
-	Dialog sms_dialog;
+	/* Dialog sms_dialog;
 	Entry sms_number_entry;
-	TextView sms_dialog_textview;
+	TextView sms_dialog_textview; */
 	Dialog about_dialog;
 	
 	public GnomeModemManager() {
@@ -171,19 +171,19 @@ class GnomeModemManager : GLib.Object {
 			this.modem_operator_name_label = this.builder.get_object("modem-operator-name-label") as Label;
 			this.modem_signal_quality_label = this.builder.get_object("modem-signal-quality-label") as Label;
 			this.modem_path_label = this.builder.get_object("modem-path-label") as Label;
-			this.contacts_tab = this.builder.get_object("contacts-tab") as Widget;
+			/* this.contacts_tab = this.builder.get_object("contacts-tab") as Widget;
 			this.no_contacts_label = this.builder.get_object("no-contacts-label") as Label;
 			this.contact_liststore = this.builder.get_object("contacts-liststore") as ListStore;
-			this.contact_treeview = this.builder.get_object("contact-treeview") as TreeView;
+			this.contact_treeview = this.builder.get_object("contact-treeview") as TreeView; */
 			this.sms_liststore = this.builder.get_object("sms-liststore") as ListStore;
 			this.sms_treeview = this.builder.get_object("sms-treeview") as TreeView;
 			this.sms_textview = this.builder.get_object("sms-textview") as TextView;
 			this.remove_sms_button = this.builder.get_object("remove-sms-button") as Button;
 			this.ussd_textview = this.builder.get_object("ussd-textview") as TextView;
 			this.ussd_entry = this.builder.get_object("ussd-entry") as Entry;
-			this.sms_dialog = this.builder.get_object("sms-dialog") as Dialog;
+			/* this.sms_dialog = this.builder.get_object("sms-dialog") as Dialog;
 			this.sms_number_entry = this.builder.get_object("sms-number-entry") as Entry;
-			this.sms_dialog_textview = this.builder.get_object("sms-dialog-textview") as TextView;
+			this.sms_dialog_textview = this.builder.get_object("sms-dialog-textview") as TextView; */
 			this.about_dialog = this.builder.get_object("about-dialog") as Dialog;
 		} catch (Error e) {
 			stderr.printf("Failed to load ui: %s\n", e.message);
@@ -261,7 +261,7 @@ class GnomeModemManager : GLib.Object {
 			} catch (Error e) {
 				warning("Query modem info error: %s", e.message);
 			}
-			try {
+			/* try {
 				contact_liststore.clear();
 				GsmContactInfo[] contacts = this.gsm_modem_contacts.List();
 				foreach (GsmContactInfo contact in contacts) {
@@ -274,7 +274,7 @@ class GnomeModemManager : GLib.Object {
 			} catch (Error e) {
 				this.no_contacts_label.visible = true;
 				this.contacts_tab.sensitive = false;
-			}
+			} */
 			this.update_sms_list();
 		} else {
 			notebook.sensitive = false;
@@ -300,7 +300,7 @@ class GnomeModemManager : GLib.Object {
 		}		
 	}
 	
-	[CCode (instance_pos = -1)]
+	/* [CCode (instance_pos = -1)]
 	public void create_sms_button_clicked(Button button) {
 		sms_number_entry.text = "+7";
 		sms_dialog_textview.buffer.text = "";
@@ -343,7 +343,7 @@ class GnomeModemManager : GLib.Object {
 			}
 		}
 		sms_dialog.hide();
-	}
+	} */
 	
 	[CCode (instance_pos = -1)]
 	public void remove_sms_button_clicked(Button button) {
