@@ -6,8 +6,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Gnome Modem Manager\n"
-"Report-Msgid-Bugs-To: kiv.apple@gmail.com\n"
-"POT-Creation-Date: 2012-01-09 12:39+0200\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2012-07-07 23:59+0400\n"
 "PO-Revision-Date: 2012-01-09 12:39+0200\n"
 "Last-Translator: Dmitriy Kuleshov <Pakirava.Datsuma@gmail.com>\n"
 "Language-Team: gnome-modem-manager\n"
@@ -28,8 +28,7 @@ msgstr "Менеджер модемів для Gnome"
 msgid "Gnome Modem Manager"
 msgstr "Gnome Modem Manager"
 
-#: gnome-modem-manager.ui:96
-#: gnome-modem-manager.ui:247
+#: gnome-modem-manager.ui:96 gnome-modem-manager.ui:247
 msgid "Modem:"
 msgstr "Модем:"
 
@@ -85,8 +84,7 @@ msgstr "Информація"
 msgid "This modem does not support contacts"
 msgstr "Цей модем не підтримує контакти"
 
-#: gnome-modem-manager.ui:550
-#: gnome-modem-manager.ui:645
+#: gnome-modem-manager.ui:550 gnome-modem-manager.ui:645
 msgid "#"
 msgstr "№"
 
@@ -114,8 +112,7 @@ msgstr "Текст"
 msgid "Completed"
 msgstr "Завершено"
 
-#: gnome-modem-manager.ui:792
-#: gnome-modem-manager.ui:942
+#: gnome-modem-manager.ui:792 gnome-modem-manager.ui:942
 msgid "SMS"
 msgstr "СМС"
 
@@ -123,8 +120,7 @@ msgstr "СМС"
 msgid "*100#"
 msgstr "*100#"
 
-#: gnome-modem-manager.ui:845
-#: gnome-modem-manager.ui:989
+#: gnome-modem-manager.ui:845 gnome-modem-manager.ui:989
 msgid "Send"
 msgstr "Надіслати"
 
@@ -135,4 +131,3 @@ msgstr "USSD"
 #: gnome-modem-manager.ui:1026
 msgid "Phone:"
 msgstr "Телефон:"
-
