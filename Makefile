@@ -12,6 +12,7 @@ install:
 	install -Dm0644 gnome-modem-manager.ui ${DESTDIR}/usr/share/gnome-modem-manager/gnome-modem-manager.ui
 	install -Dm0755 gnome-modem-manager.desktop ${DESTDIR}/usr/share/applications/gnome-modem-manager.desktop
 	install -Dm0644 po/gnome-modem-manager-ru_RU.mo ${DESTDIR}/usr/share/locale/ru_RU/LC_MESSAGES/gnome-modem-manager.mo
+	install -Dm0644 po/gnome-modem-manager-ru_UA.mo ${DESTDIR}/usr/share/locale/ru_UA/LC_MESSAGES/gnome-modem-manager.mo
 uninstall:
 	rm -fv ${DESTDIR}/usr/bin/gnome-modem-manager
 	rm -fv ${DESTDIR}/usr/share/gnome-modem-manager/gnome-modem-manager.ui
