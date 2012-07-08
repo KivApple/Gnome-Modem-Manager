@@ -10,7 +10,7 @@ BINSIZE=`du -s ./package | grep  -o [0-9]*`
 cp -r $DEBIANDIR/info $CURDIR/package/DEBIAN
 cat $CURDIR/package/DEBIAN/control.template | sed "s/\$BINSIZE/$BINSIZE/g" | sed "s/\$ARCH/$ARCH/g" > $CURDIR/package/DEBIAN/control
 rm -f $CURDIR/package/DEBIAN/control.template
-DEBVERSION=`cat package/DEBIAN/control | grep ^Version: | grep -o [0-9\\.]*`
+DEBVERSION=`cat package/DEBIAN/changelog | grep -o \(.*\) | sed "s/[\\(|\\)]//g" | head -n 1`
 fakeroot dpkg -b package
 mv "package.deb" "packaging/debian/gnome-modem-manager-$DEBVERSION-$ARCH.deb"
 rm -rf $CURDIR/package
