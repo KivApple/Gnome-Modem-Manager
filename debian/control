@@ -10,7 +10,6 @@ Homepage: http://cpu-fun.ru/projects/gmm
 Package: gnome-modem-manager
 Version: 0.0.1
 Architecture: any
-Installed-Size: 240
 Depends: modemmanager (>= 0.5), libgtk-3-0
 Description: GUI tool to control 3G modem via ModemManager D-Bus API
  This program looks like such programs as Megafon Internet, MTS Connect, and others in Windows. The main target Desktop Environment is Gnome, but it can be used in other environments too. In fact it's just a GUI for some functions provided by ModemManager.
