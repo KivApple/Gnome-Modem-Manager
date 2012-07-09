@@ -1,3 +1,4 @@
+Format: 1.0
 Source: gnome-modem-manager
 Binary: gnome-modem-manager
 Section: net
@@ -6,9 +7,9 @@ Maintainer: kiv <kiv.apple@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), libgtk-3-dev, valac-0.14
 Standards-Version: 3.9.2
 Homepage: http://cpu-fun.ru/projects/gmm
-#Vcs-Git: git://github.com/kiv-apple/Gnome-Modem-Manager.git
-#Vcs-Browser: https://github.com/kiv-apple/Gnome-Modem-Manager
-#Package: gnome-modem-manager
+Vcs-Git: git://github.com/kiv-apple/Gnome-Modem-Manager.git
+Vcs-Browser: https://github.com/kiv-apple/Gnome-Modem-Manager
+Package: gnome-modem-manager
 Version: 0.0.1
 Architecture: any
 Depends: modemmanager (>= 0.5), libgtk-3-0
