@@ -9,7 +9,7 @@ Homepage: http://cpu-fun.ru/projects/gmm
 #Vcs-Browser: https://github.com/kiv-apple/Gnome-Modem-Manager
 Package: gnome-modem-manager
 Version: 0.0.1
-Architecture: i386
+Architecture: any
 Installed-Size: 240
 Depends: modemmanager (>= 0.5), libgtk-3-0
 Description: GUI tool to control 3G modem via ModemManager D-Bus API
