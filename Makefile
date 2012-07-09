@@ -19,3 +19,4 @@ uninstall:
 	rm -fv ${DESTDIR}/usr/share/applications/gnome-modem-manager.desktop
 	rm -fv ${DESTDIR}/opt/gnome-modem-manager/locale/ru_RU/LC_MESSAGES/gnome-modem-manager.mo
 	rm -fv ${DESTDIR}/opt/gnome-modem-manager/locale/ru_UA/LC_MESSAGES/gnome-modem-manager.mo
+	rm -frv ${DESTDIR}/opt/gnome-modem-manager

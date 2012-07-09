@@ -137,7 +137,11 @@ class GnomeModemManager : GLib.Object {
 	Dialog about_dialog;
 	
 	public GnomeModemManager() {
-		GLib.Intl.bindtextdomain("gnome-modem-manager", "/opt/gnome-modem-manager/locale/LC_MESSAGES");
+		if (FileUtils.test("/usr/share/locale/ru_RU/LC_MESSAGES/gnome-modem-manager.mo", GLib.FileTest.EXISTS)) {
+			GLib.Intl.bindtextdomain("gnome-modem-manager", "/usr/share/locale");
+		} else {
+			GLib.Intl.bindtextdomain("gnome-modem-manager", "/opt/gnome-modem-manager/locale");
+		}
 		GLib.Intl.bind_textdomain_codeset("gnome-modem-manager", "UTF-8");
 		GLib.Intl.textdomain("gnome-modem-manager");
 		this.load_ui();
