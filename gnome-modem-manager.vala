@@ -137,7 +137,7 @@ class GnomeModemManager : GLib.Object {
 	Dialog about_dialog;
 	
 	public GnomeModemManager() {
-		GLib.Intl.bindtextdomain("gnome-modem-manager", "/usr/share/locale");
+		GLib.Intl.bindtextdomain("gnome-modem-manager", "/opt/gnome-modem-manager/locale");
 		GLib.Intl.bind_textdomain_codeset("gnome-modem-manager", "UTF-8");
 		GLib.Intl.textdomain("gnome-modem-manager");
 		this.load_ui();
@@ -155,7 +155,7 @@ class GnomeModemManager : GLib.Object {
 				try {
 					this.builder.add_from_file("/usr/share/gnome-modem-manager/gnome-modem-manager.ui");
 				} catch (Error e) {
-					this.builder.add_from_file("/opt/usr/share/gnome-modem-manager/gnome-modem-manager.ui");
+					this.builder.add_from_file("/opt/gnome-modem-manager/gnome-modem-manager.ui");
 				}
 			}
 			this.builder.connect_signals(this);
