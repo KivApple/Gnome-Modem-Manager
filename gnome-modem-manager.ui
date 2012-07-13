@@ -9,7 +9,7 @@
     <property name="version">0.0.1</property>
     <property name="copyright" translatable="yes">Copyright (C) 2011 KIV</property>
     <property name="comments" translatable="yes">Modem manager for Gnome</property>
-    <property name="website">http://cpu-fun.ru/</property>
+    <property name="website">http://cpu-fun.ru/projects/gmm</property>
     <property name="authors">KIV &lt;kiv.apple@gmail.com&gt;</property>
     <property name="license_type">gpl-2-0</property>
     <child internal-child="vbox">
@@ -43,26 +43,6 @@
       <column type="gchararray"/>
       <!-- column-name contact_index -->
       <column type="guint"/>
-    </columns>
-  </object>
-  <object class="GtkListStore" id="modem-liststore">
-    <columns>
-      <!-- column-name title -->
-      <column type="gchararray"/>
-      <!-- column-name modem -->
-      <column type="GObject"/>
-      <!-- column-name gsm_modem_card -->
-      <column type="GObject"/>
-      <!-- column-name gsm_modem_network -->
-      <column type="GObject"/>
-      <!-- column-name gsm_modem_ussd -->
-      <column type="GObject"/>
-      <!-- column-name object_path -->
-      <column type="gchararray"/>
-      <!-- column-name gsm_modem_sms -->
-      <column type="GObject"/>
-      <!-- column-name gsm_modem_contacts -->
-      <column type="GObject"/>
     </columns>
   </object>
   <object class="GtkWindow" id="main-window">
@@ -735,6 +715,26 @@
         </child>
       </object>
     </child>
+  </object>
+  <object class="GtkListStore" id="modem-liststore">
+    <columns>
+      <!-- column-name title -->
+      <column type="gchararray"/>
+      <!-- column-name modem -->
+      <column type="GObject"/>
+      <!-- column-name gsm_modem_card -->
+      <column type="GObject"/>
+      <!-- column-name gsm_modem_network -->
+      <column type="GObject"/>
+      <!-- column-name gsm_modem_ussd -->
+      <column type="GObject"/>
+      <!-- column-name object_path -->
+      <column type="gchararray"/>
+      <!-- column-name gsm_modem_sms -->
+      <column type="GObject"/>
+      <!-- column-name gsm_modem_contacts -->
+      <column type="GObject"/>
+    </columns>
   </object>
   <object class="GtkListStore" id="sms-liststore">
     <columns>
