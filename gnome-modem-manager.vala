@@ -131,6 +131,7 @@ class GnomeModemManager : GLib.Object {
 	Button remove_sms_button;
 	TextView ussd_textview;
 	Entry ussd_entry;
+	Button abort_ussd_button;
 	/* Dialog sms_dialog;
 	Entry sms_number_entry;
 	TextView sms_dialog_textview; */
@@ -189,6 +190,7 @@ class GnomeModemManager : GLib.Object {
 			this.remove_sms_button = this.builder.get_object("remove-sms-button") as Button;
 			this.ussd_textview = this.builder.get_object("ussd-textview") as TextView;
 			this.ussd_entry = this.builder.get_object("ussd-entry") as Entry;
+			this.abort_ussd_button = this.builder.get_object("abort-ussd-button") as Button;
 			/* this.sms_dialog = this.builder.get_object("sms-dialog") as Dialog;
 			this.sms_number_entry = this.builder.get_object("sms-number-entry") as Entry;
 			this.sms_dialog_textview = this.builder.get_object("sms-dialog-textview") as TextView; */
@@ -237,11 +239,14 @@ class GnomeModemManager : GLib.Object {
 				this.gsm_modem_network.SignalQuality.disconnect(this.signal_quality_changed);
 				this.gsm_modem_network.RegistrationInfo.disconnect(this.registration_info_changed);				
 			}
+			bool ussd_session;
 			modem_liststore.get(iter, 1, out this.modem, 2, out this.gsm_modem_card, 3, out this.gsm_modem_network,
-				4, out this.gsm_modem_ussd, 5, out this.modem_path, 6, out this.gsm_modem_sms, 7, out this.gsm_modem_contacts);
+				4, out this.gsm_modem_ussd, 5, out this.modem_path, 6, out this.gsm_modem_sms, 7, out this.gsm_modem_contacts,
+				8, out ussd_session);
 			this.gsm_modem_network.SignalQuality.connect(this.signal_quality_changed);
 			this.gsm_modem_network.RegistrationInfo.connect(this.registration_info_changed);
 			notebook.sensitive = true;
+			this.abort_ussd_button.sensitive = ussd_session;
 			try {
 				this.modem.Enable(true);
 				this.modem_driver_label.set_text(this.modem.Driver);
@@ -375,17 +380,41 @@ class GnomeModemManager : GLib.Object {
 	[CCode (instance_pos = -1)]
 	public void send_ussd_button_clicked(Button button) {
 		try {
-			string result = this.gsm_modem_ussd.Initiate(this.ussd_entry.text);
+			TreeIter iter;
+			this.modem_combobox.get_active_iter(out iter);
+			bool session_started;
+			this.modem_liststore.get(iter, 8, out session_started);
+			string result;
+			if (session_started) {
+				this.gsm_modem_ussd.Respond(this.ussd_entry.text);
+				result = "Hm... And what I must do now?!\n" +
+					"Read http://projects.gnome.org/NetworkManager/developers/mm-spec-04.html#org.freedesktop.ModemManager.Modem.Gsm.Ussd";
+			} else {
+				result = this.gsm_modem_ussd.Initiate(this.ussd_entry.text);
+				this.modem_liststore.set(iter, 8, true);
+				this.abort_ussd_button.sensitive = true;
+			}
 			this.ussd_textview.buffer.text = result;
 		} catch (Error e) {
 			var dialog = new MessageDialog.with_markup(this.main_window, DialogFlags.MODAL | DialogFlags.DESTROY_WITH_PARENT,
 				MessageType.ERROR, ButtonsType.CLOSE, "<b>USSD query failed</b>\n%s", e.message);
 			dialog.run();
 			dialog.destroy();
+			try {
+				this.gsm_modem_ussd.Cancel();
+			} catch (Error e) {}
 		}
+	}
+	
+	[CCode (instance_pos = -1)]
+	public void abort_ussd_button_clicked(Button button) {
 		try {
 			this.gsm_modem_ussd.Cancel();
 		} catch (Error e) {}
+		TreeIter iter;
+		this.modem_combobox.get_active_iter(out iter);
+		this.modem_liststore.set(iter, 8, false);
+		this.abort_ussd_button.sensitive = false;
 	}
 	
 	[CCode (instance_pos = -1)]
@@ -436,7 +465,7 @@ class GnomeModemManager : GLib.Object {
 		this.modem_liststore.append(out iter);
 		ModemInfo info = modem.GetInfo();
 		this.modem_liststore.set(iter, 0, "%s (%s %s)".printf(modem.Device, info.manufacturer, info.modem),
-			1, modem, 2, gsm_modem_card, 3, gsm_modem_network, 4, gsm_modem_ussd, 5, device, 6, gsm_modem_sms, 7, gsm_modem_contacts);
+			1, modem, 2, gsm_modem_card, 3, gsm_modem_network, 4, gsm_modem_ussd, 5, device, 6, gsm_modem_sms, 7, gsm_modem_contacts, 8, false);
 		if (this.modem == null) {
 			modem_combobox.active = 0;
 		}

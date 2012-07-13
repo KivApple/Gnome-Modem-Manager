@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Gnome Modem Manager\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-07 23:59+0400\n"
+"POT-Creation-Date: 2012-07-14 02:35+0400\n"
 "PO-Revision-Date: 2011-12-04 18:40+0300\n"
 "Last-Translator: kiv <kiv.apple@gmail.com>\n"
 "Language-Team: gnome-modem-manager\n"
@@ -24,110 +24,109 @@ msgstr "Copyright (c) 2011 KIV"
 msgid "Modem manager for Gnome"
 msgstr "Менеджер модемов для Gnome"
 
-#: gnome-modem-manager.ui:75
+#: gnome-modem-manager.ui:72
 msgid "Gnome Modem Manager"
 msgstr "Gnome Modem Manager"
 
-#: gnome-modem-manager.ui:96 gnome-modem-manager.ui:247
+#: gnome-modem-manager.ui:93 gnome-modem-manager.ui:222
 msgid "Modem:"
 msgstr "Модем:"
 
-#: gnome-modem-manager.ui:151
+#: gnome-modem-manager.ui:147
 msgid "Device:"
 msgstr "Устройство:"
 
-#: gnome-modem-manager.ui:179
+#: gnome-modem-manager.ui:166
 msgid "Master device:"
 msgstr "Основное устройство:"
 
-#: gnome-modem-manager.ui:231
+#: gnome-modem-manager.ui:209
 msgid "Manufacturer:"
 msgstr "Производитель:"
 
-#: gnome-modem-manager.ui:275
+#: gnome-modem-manager.ui:245
 msgid "Version:"
 msgstr "Версия:"
 
-#: gnome-modem-manager.ui:303
+#: gnome-modem-manager.ui:268
 msgid "Driver:"
 msgstr "Драйвер:"
 
-#: gnome-modem-manager.ui:319
+#: gnome-modem-manager.ui:281
 msgid "IMEI:"
 msgstr "IMEI:"
 
-#: gnome-modem-manager.ui:335
+#: gnome-modem-manager.ui:294
 msgid "IMSI:"
 msgstr "IMSI:"
 
-#: gnome-modem-manager.ui:375
+#: gnome-modem-manager.ui:327
 msgid "Service provider:"
 msgstr "Поставщик услуг:"
 
-#: gnome-modem-manager.ui:403
+#: gnome-modem-manager.ui:350
 msgid "Signal qualitiy:"
 msgstr "Уровень сигнала:"
 
-#: gnome-modem-manager.ui:431
+#: gnome-modem-manager.ui:373
 msgid "Operator name:"
 msgstr "Имя оператора:"
 
-#: gnome-modem-manager.ui:459
+#: gnome-modem-manager.ui:396
 msgid "Object path:"
 msgstr "Адрес объекта:"
 
-#: gnome-modem-manager.ui:505
+#: gnome-modem-manager.ui:428
 msgid "Info"
 msgstr "Информация"
 
-#: gnome-modem-manager.ui:519
-msgid "This modem does not support contacts"
-msgstr "Этот модем не поддерживает список контактов"
-
-#: gnome-modem-manager.ui:550 gnome-modem-manager.ui:645
+#: gnome-modem-manager.ui:465
 msgid "#"
 msgstr "№"
 
-#: gnome-modem-manager.ui:561
-msgid "Name"
-msgstr "Имя"
-
-#: gnome-modem-manager.ui:572
-msgid "Number"
-msgstr "Номер"
-
-#: gnome-modem-manager.ui:606
-msgid "Contacts"
-msgstr "Контакты"
-
-#: gnome-modem-manager.ui:656
+#: gnome-modem-manager.ui:476
 msgid "Phone number"
 msgstr "Номер телефона"
 
-#: gnome-modem-manager.ui:670
+#: gnome-modem-manager.ui:490
 msgid "Text"
 msgstr "Текст"
 
-#: gnome-modem-manager.ui:681
+#: gnome-modem-manager.ui:501
 msgid "Completed"
 msgstr "Завершено"
 
-#: gnome-modem-manager.ui:792 gnome-modem-manager.ui:942
+#: gnome-modem-manager.ui:595
 msgid "SMS"
 msgstr "СМС"
 
-#: gnome-modem-manager.ui:835
+#: gnome-modem-manager.ui:637
 msgid "*100#"
 msgstr "*100#"
 
-#: gnome-modem-manager.ui:845 gnome-modem-manager.ui:989
+#: gnome-modem-manager.ui:647
 msgid "Send"
 msgstr "Отправить"
 
-#: gnome-modem-manager.ui:875
+#: gnome-modem-manager.ui:663
+msgid "Abort"
+msgstr "Прервать"
+
+#: gnome-modem-manager.ui:693
 msgid "USSD"
 msgstr "USSD"
 
-#: gnome-modem-manager.ui:1026
-msgid "Phone:"
-msgstr "Телефон:"
+#~ msgid "This modem does not support contacts"
+#~ msgstr "Этот модем не поддерживает список контактов"
+
+#~ msgid "Name"
+#~ msgstr "Имя"
+
+#~ msgid "Number"
+#~ msgstr "Номер"
+
+#~ msgid "Contacts"
+#~ msgstr "Контакты"
+
+#~ msgid "Phone:"
+#~ msgstr "Телефон:"

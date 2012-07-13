@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2012-07-07 23:59+0400\n"
+"POT-Creation-Date: 2012-07-14 02:35+0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -25,110 +25,94 @@ msgstr ""
 msgid "Modem manager for Gnome"
 msgstr ""
 
-#: gnome-modem-manager.ui:75
+#: gnome-modem-manager.ui:72
 msgid "Gnome Modem Manager"
 msgstr ""
 
-#: gnome-modem-manager.ui:96 gnome-modem-manager.ui:247
+#: gnome-modem-manager.ui:93 gnome-modem-manager.ui:222
 msgid "Modem:"
 msgstr ""
 
-#: gnome-modem-manager.ui:151
+#: gnome-modem-manager.ui:147
 msgid "Device:"
 msgstr ""
 
-#: gnome-modem-manager.ui:179
+#: gnome-modem-manager.ui:166
 msgid "Master device:"
 msgstr ""
 
-#: gnome-modem-manager.ui:231
+#: gnome-modem-manager.ui:209
 msgid "Manufacturer:"
 msgstr ""
 
-#: gnome-modem-manager.ui:275
+#: gnome-modem-manager.ui:245
 msgid "Version:"
 msgstr ""
 
-#: gnome-modem-manager.ui:303
+#: gnome-modem-manager.ui:268
 msgid "Driver:"
 msgstr ""
 
-#: gnome-modem-manager.ui:319
+#: gnome-modem-manager.ui:281
 msgid "IMEI:"
 msgstr ""
 
-#: gnome-modem-manager.ui:335
+#: gnome-modem-manager.ui:294
 msgid "IMSI:"
 msgstr ""
 
-#: gnome-modem-manager.ui:375
+#: gnome-modem-manager.ui:327
 msgid "Service provider:"
 msgstr ""
 
-#: gnome-modem-manager.ui:403
+#: gnome-modem-manager.ui:350
 msgid "Signal qualitiy:"
 msgstr ""
 
-#: gnome-modem-manager.ui:431
+#: gnome-modem-manager.ui:373
 msgid "Operator name:"
 msgstr ""
 
-#: gnome-modem-manager.ui:459
+#: gnome-modem-manager.ui:396
 msgid "Object path:"
 msgstr ""
 
-#: gnome-modem-manager.ui:505
+#: gnome-modem-manager.ui:428
 msgid "Info"
 msgstr ""
 
-#: gnome-modem-manager.ui:519
-msgid "This modem does not support contacts"
-msgstr ""
-
-#: gnome-modem-manager.ui:550 gnome-modem-manager.ui:645
+#: gnome-modem-manager.ui:465
 msgid "#"
 msgstr ""
 
-#: gnome-modem-manager.ui:561
-msgid "Name"
-msgstr ""
-
-#: gnome-modem-manager.ui:572
-msgid "Number"
-msgstr ""
-
-#: gnome-modem-manager.ui:606
-msgid "Contacts"
-msgstr ""
-
-#: gnome-modem-manager.ui:656
+#: gnome-modem-manager.ui:476
 msgid "Phone number"
 msgstr ""
 
-#: gnome-modem-manager.ui:670
+#: gnome-modem-manager.ui:490
 msgid "Text"
 msgstr ""
 
-#: gnome-modem-manager.ui:681
+#: gnome-modem-manager.ui:501
 msgid "Completed"
 msgstr ""
 
-#: gnome-modem-manager.ui:792 gnome-modem-manager.ui:942
+#: gnome-modem-manager.ui:595
 msgid "SMS"
 msgstr ""
 
-#: gnome-modem-manager.ui:835
+#: gnome-modem-manager.ui:637
 msgid "*100#"
 msgstr ""
 
-#: gnome-modem-manager.ui:845 gnome-modem-manager.ui:989
+#: gnome-modem-manager.ui:647
 msgid "Send"
 msgstr ""
 
-#: gnome-modem-manager.ui:875
-msgid "USSD"
+#: gnome-modem-manager.ui:663
+msgid "Abort"
 msgstr ""
 
-#: gnome-modem-manager.ui:1026
-msgid "Phone:"
+#: gnome-modem-manager.ui:693
+msgid "USSD"
 msgstr ""
