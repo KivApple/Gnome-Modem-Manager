@@ -233,6 +233,7 @@ class GnomeModemManager : GLib.Object {
 	
 	[CCode (instance_pos = -1)]
 	public void modem_changed(ComboBox combobox) {
+		this.abort_ussd_button_clicked(this.abort_ussd_button);
 		TreeIter iter;
 		if (combobox.get_active_iter(out iter)) {
 			if (this.modem != null) {
@@ -385,14 +386,15 @@ class GnomeModemManager : GLib.Object {
 			bool session_started;
 			this.modem_liststore.get(iter, 8, out session_started);
 			string result;
-			if (session_started) {
+			if (this.gsm_modem_ussd.State == "user-response") {
 				this.gsm_modem_ussd.Respond(this.ussd_entry.text);
-				result = "Hm... And what I must do now?!\n" +
-					"Read http://projects.gnome.org/NetworkManager/developers/mm-spec-04.html#org.freedesktop.ModemManager.Modem.Gsm.Ussd";
+				result = this.gsm_modem_ussd.NetworkRequest + this.gsm_modem_ussd.NetworkNotification;
 			} else {
 				result = this.gsm_modem_ussd.Initiate(this.ussd_entry.text);
-				this.modem_liststore.set(iter, 8, true);
-				this.abort_ussd_button.sensitive = true;
+				if (this.gsm_modem_ussd.State == "user-response") {
+					this.modem_liststore.set(iter, 8, true);
+					this.abort_ussd_button.sensitive = true;
+				}
 			}
 			this.ussd_textview.buffer.text = result;
 		} catch (Error e) {
@@ -408,13 +410,15 @@ class GnomeModemManager : GLib.Object {
 	
 	[CCode (instance_pos = -1)]
 	public void abort_ussd_button_clicked(Button button) {
-		try {
-			this.gsm_modem_ussd.Cancel();
-		} catch (Error e) {}
-		TreeIter iter;
-		this.modem_combobox.get_active_iter(out iter);
-		this.modem_liststore.set(iter, 8, false);
-		this.abort_ussd_button.sensitive = false;
+		if (this.gsm_modem_ussd != null) {
+			try {
+				this.gsm_modem_ussd.Cancel();
+			} catch (Error e) {}
+			TreeIter iter;
+			this.modem_combobox.get_active_iter(out iter);
+			this.modem_liststore.set(iter, 8, false);
+			this.abort_ussd_button.sensitive = false;
+		}
 	}
 	
 	[CCode (instance_pos = -1)]
