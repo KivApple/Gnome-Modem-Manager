@@ -3,7 +3,7 @@ Upstream-Name: gnome-modem-manager
 Source: https://github.com/kiv-apple/Gnome-Modem-Manager
 
 Files: *
-Copyright: 2011-2012 KIV <kiv.apple@gmail.com>
+Copyright: 2011-2012 Ivan Kolesnikov <kiv.apple@gmail.com>
 License: GPL-2+
 
 Files: po/gnome-modem-manager-ru_UA.*

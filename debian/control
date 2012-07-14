@@ -1,7 +1,7 @@
 Source: gnome-modem-manager
 Section: net
 Priority: optional
-Maintainer: kiv <kiv.apple@gmail.com>
+Maintainer: Ivan Kolesnikov <kiv.apple@gmail.com>
 Build-Depends: debhelper (>= 8.0.0), libgtk-3-dev, valac-0.14
 Standards-Version: 3.9.2
 Homepage: http://cpu-fun.ru/projects/gmm
