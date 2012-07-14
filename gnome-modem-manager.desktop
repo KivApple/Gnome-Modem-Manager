@@ -3,7 +3,7 @@
 Version=1.0
 Name=Gnome Modem Manager
 Comment=GUI utility for control 3G modem
-TryExec=/opt/gnome-modem-manager/gnome-modem-manager
+TryExec=/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager
 Exec=/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager
 Icon=modem
 Terminal=false
