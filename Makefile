@@ -10,13 +10,13 @@ clean:
 install:
 	install -Dm0755 gnome-modem-manager ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager
 	install -Dm0644 gnome-modem-manager.ui ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager.ui
-	install -Dm0755 gnome-modem-manager.desktop ${DESTDIR}/usr/share/applications/gnome-modem-manager.desktop
+	install -Dm0755 gnome-modem-manager.desktop ${DESTDIR}/usr/share/applications/extras-gnome-modem-manager.desktop
 	install -Dm0644 po/gnome-modem-manager-ru_RU.mo ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/locale/ru_RU/LC_MESSAGES/gnome-modem-manager.mo
 	install -Dm0644 po/gnome-modem-manager-ru_UA.mo ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/locale/ru_UA/LC_MESSAGES/gnome-modem-manager.mo
 uninstall:
 	rm -fv ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager
 	rm -fv ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager.ui
-	rm -fv ${DESTDIR}/usr/share/applications/gnome-modem-manager.desktop
+	rm -fv ${DESTDIR}/usr/share/applications/extras-gnome-modem-manager.desktop
 	rm -fv ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/locale/ru_RU/LC_MESSAGES/gnome-modem-manager.mo
 	rm -fv ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager/locale/ru_UA/LC_MESSAGES/gnome-modem-manager.mo
 	rm -frv ${DESTDIR}/opt/extras.ubuntu.com/gnome-modem-manager
