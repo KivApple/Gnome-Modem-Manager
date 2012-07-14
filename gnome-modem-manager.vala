@@ -141,7 +141,7 @@ class GnomeModemManager : GLib.Object {
 		if (FileUtils.test("/usr/share/locale/ru_RU/LC_MESSAGES/gnome-modem-manager.mo", GLib.FileTest.EXISTS)) {
 			GLib.Intl.bindtextdomain("gnome-modem-manager", "/usr/share/locale");
 		} else {
-			GLib.Intl.bindtextdomain("gnome-modem-manager", "/opt/gnome-modem-manager/locale");
+			GLib.Intl.bindtextdomain("gnome-modem-manager", "/opt/extras.ubuntu.com/gnome-modem-manager/locale");
 		}
 		GLib.Intl.bind_textdomain_codeset("gnome-modem-manager", "UTF-8");
 		GLib.Intl.textdomain("gnome-modem-manager");
@@ -160,7 +160,7 @@ class GnomeModemManager : GLib.Object {
 				try {
 					this.builder.add_from_file("/usr/share/gnome-modem-manager/gnome-modem-manager.ui");
 				} catch (Error e) {
-					this.builder.add_from_file("/opt/gnome-modem-manager/gnome-modem-manager.ui");
+					this.builder.add_from_file("/opt/extras.ubuntu.com/gnome-modem-manager/gnome-modem-manager.ui");
 				}
 			}
 			this.builder.connect_signals(this);
