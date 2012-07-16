@@ -1,9 +1,10 @@
-Format: http://dep.debian.net/deps/dep5
+Format: http://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: gnome-modem-manager
+Upstream-Contact: KIV <kiv.apple@gmail.com>
 Source: https://github.com/kiv-apple/Gnome-Modem-Manager
 
 Files: *
-Copyright: 2011-2012 Ivan Kolesnikov <kiv.apple@gmail.com>
+Copyright: 2011-2012 KIV <kiv.apple@gmail.com>
 License: GPL-2+
 
 Files: po/gnome-modem-manager-ru_UA.*
