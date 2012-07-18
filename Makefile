@@ -1,4 +1,6 @@
-ifneq ($([ -e /etc/lsb-release ] && cat /etc/lsb-release | grep Ubuntu),)
+TMP = `[ -e /etc/lsb-release ] && cat /etc/lsb-release | grep Ubuntu`
+
+ifneq ($(TMP),)
 	IS_UBUNTU = 1
 endif
 
