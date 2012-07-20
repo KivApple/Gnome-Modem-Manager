@@ -98,7 +98,7 @@ msgstr "Завершено"
 
 #: gnome-modem-manager.ui:595
 msgid "SMS"
-msgstr "СМС"
+msgstr "SMS"
 
 #: gnome-modem-manager.ui:637
 msgid "*100#"
