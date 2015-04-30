@@ -106,7 +106,7 @@ class GnomeModemManager : GLib.Object {
 	KeyFile config;
 	Builder builder;
 	Window main_window;
-	ListStore modem_liststore;
+	Gtk.ListStore modem_liststore;
 	ComboBox modem_combobox;
 	Notebook notebook;
 	Label modem_device_label;
@@ -125,7 +125,7 @@ class GnomeModemManager : GLib.Object {
 	Label no_contacts_label;
 	ListStore contact_liststore;
 	TreeView contact_treeview; */
-	ListStore sms_liststore;
+	Gtk.ListStore sms_liststore;
 	TreeView sms_treeview;
 	TextView sms_textview;
 	Button remove_sms_button;
@@ -165,7 +165,7 @@ class GnomeModemManager : GLib.Object {
 			}
 			this.builder.connect_signals(this);
 			this.main_window = this.builder.get_object("main-window") as Window;
-			this.modem_liststore = this.builder.get_object("modem-liststore") as ListStore;
+			this.modem_liststore = this.builder.get_object("modem-liststore") as Gtk.ListStore;
 			this.modem_combobox = this.builder.get_object("modem-combobox") as ComboBox;
 			this.notebook = this.builder.get_object("notebook") as Notebook;
 			this.modem_device_label = this.builder.get_object("modem-device-label") as Label;
@@ -184,7 +184,7 @@ class GnomeModemManager : GLib.Object {
 			this.no_contacts_label = this.builder.get_object("no-contacts-label") as Label;
 			this.contact_liststore = this.builder.get_object("contacts-liststore") as ListStore;
 			this.contact_treeview = this.builder.get_object("contact-treeview") as TreeView; */
-			this.sms_liststore = this.builder.get_object("sms-liststore") as ListStore;
+			this.sms_liststore = this.builder.get_object("sms-liststore") as Gtk.ListStore;
 			this.sms_treeview = this.builder.get_object("sms-treeview") as TreeView;
 			this.sms_textview = this.builder.get_object("sms-textview") as TextView;
 			this.remove_sms_button = this.builder.get_object("remove-sms-button") as Button;
@@ -480,7 +480,7 @@ class GnomeModemManager : GLib.Object {
 				string object_path;
 				model.get(iter, 5, out object_path);
 				if (object_path == device) {
-					(model as ListStore).remove(iter);
+					(model as Gtk.ListStore).remove(iter);
 					return false;
 				} else {
 					return true;
